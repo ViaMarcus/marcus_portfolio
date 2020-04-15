@@ -4,7 +4,8 @@
   "description": "A personal porfolio highlighting my projects",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --inline --mode development --open"
+    "start": "webpack-dev-server --inline --mode development --open",
+    "cy:open": "npm start & cypress open"
   },
   "author": "Marcus Sjöqvist",
   "license": "MIT",
@@ -20,10 +21,11 @@
     "@babel/preset-react": "^7.9.4",
     "babel-loader": "^8.0.2",
     "css-loader": "^1.0.0",
+    "cypress": "^4.4.0",
     "style-loader": "^0.23.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
-    "webpack": "^4.19.1",
+    "webpack": "^4.42.1",
     "webpack-cli": "^3.1.1",
-    "webpack-dev-server": "^3.1.8"
+    "webpack-dev-server": "^3.10.3"
   }
 }
