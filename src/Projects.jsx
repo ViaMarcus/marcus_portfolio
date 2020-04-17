@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ProjectCard from "./ProjectCard"
 import axios from "axios";
 
 class Projects extends Component {
@@ -22,18 +23,22 @@ class Projects extends Component {
         if (projects.length > 0) {
             projectsList = projects.map(project => {
                 return (
-                    <div id={'project-' + project.id} key={project.id}>
-                        <h3 className="ui header">{projects.name}</h3>
+                    <div id={'project-' + project.id} class= "project-div" key={project.id}>
+                        <ProjectCard project={ project } />
                     </div>
                 );
             })
+        } else {
+            <h3>No Projects to show</h3>
         };
     
 
         return (
             <div className="ui main container">
                 <h1 id="projects-header" className="ui header">My Projects</h1>
-                {projectsList}
+                <div class="project-grid">
+                    {projectsList}
+                </div>
             </div>
         );
     }
