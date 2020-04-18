@@ -4,11 +4,14 @@ const ProjectCard = ({ project }) => {
     return (
         <>
             <div class="ui card">
-                <div class="image">
-                    <img src={ project.image } alt="failed to load" title={project.imageAlt}/>
+                
+                <div class="card-left">
+                    <h2 class="ui header">{project.name}</h2>
+                    <div class="image">
+                        <img src={ project.image } alt="failed to load" title={project.imageAlt}/>
+                    </div>
                 </div>
                 <div class="content">
-                    <h3 class="ui header">{project.name}</h3>
                     <div class="description">{project.description}</div>
                 </div>
             </div>
