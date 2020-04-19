@@ -1,23 +1,31 @@
 import React from "react"
 
-const ProjectCard = ({ project }) => {
-    return (
-        <>
-            <div class="ui card project">
-                
-                <div class="card-left">
-                    <h2 class="ui header">{project.name}</h2>
-                    <div class="image">
-                        <img src={ project.image } alt="failed to load" title={project.imageAlt}/>
-                    </div>
+class ProjectCard extends React.Component {
+
+    setPopup = () => {
+        this.props.setPopup(this.props.project)
+    }
+
+
+
+    render() {
+        let project = this.props.project
+        return (
+        <div className="ui card project" onClick = { this.setPopup }>
+            
+            <div className="card-left">
+                <h2 className="ui header">{project.name}</h2>
+                <div className="image">
+                    <img src={ project.image } alt="failed to load" title={project.imageAlt}/>
                 </div>
-                <div class="content">
-                    <div class="description">{project.description}</div>
-                </div>
-                
             </div>
-        </>
-    )
+            <div className="content">
+                <div className="description">{project.description}</div>
+            </div>
+            
+        </div>
+        )
+    }
 };
 
 export default ProjectCard;

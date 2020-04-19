@@ -25,7 +25,7 @@ nav {
 }
 
 .ui.main {
-    background-color: red;
+    /* background-color: red; */
     margin-top: 4em;
     padding-left: 10px;
     margin-left: 15px;
@@ -79,10 +79,12 @@ nav {
     height: 100%;
     display: grid;
     margin: auto;
+    box-shadow: 1px 1px 2px 2px darkgray; 
 }
 
 .ui.card:hover {
     transform: scale(1.01);
+    cursor: pointer;
 }
 
 .ui.card.cv {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ProjectCard from "./ProjectCard"
-import Popup from "./Popup"
+// import Popup from "./Popup"
 import axios from "axios";
 
 class Projects extends Component {
@@ -18,15 +18,23 @@ class Projects extends Component {
         })
     }
 
+    setPopup = (project) => {
+        this.setState(state => ({ popup: project }))
+    }
+
+
+
     render() {
         const projects = this.state.projects;
         let projectsList
+        let popup = this.state.popup
+        
 
         if (projects.length > 0) {
             projectsList = projects.map(project => {
                 return (
-                    <div id={'project-' + project.id} class= "project-div" key={project.id}>
-                        <ProjectCard project={ project } />
+                    <div id={'project-' + project.id} className= "project-div" key={project.id}>
+                        <ProjectCard project={ project } setPopup={ this.setPopup } />
                     </div>
                 );
             })
@@ -36,17 +44,21 @@ class Projects extends Component {
     
 
         return (
+            
             <>
             <div className="ui main container">
                 <h1 id="projects-header" className="ui header">My Projects</h1>
-                <div class="project-grid">
+                <div className="project-grid">
                     {projectsList}
                 </div>
             </div>
-            <Popup project= { popup }/>
+            {/* <Popup project= { ...popup,  }/> */}
         </>
         );
     }
+
+
 }
+
 
 export default Projects;
