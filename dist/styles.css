@@ -2,6 +2,10 @@ body {
     background-color: #f5f5f5;
     font-family: monospace;
 }
+
+#app {
+    overflow: hidden;
+}
 #footer {
     position: fixed;
     bottom: 0;
@@ -29,27 +33,46 @@ nav {
     width: 80vw;
 }
 .ui.container {
-    color: yellow;
+    color: darkgray;
     width: 80vw;
+}
+.ui.container h3 {
+    color: darkgray;
+}
+
+.ui.container h2 {
+    color: black;
 }
 
 .project-grid {
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(40vh);
+    /* grid-template-rows: repeat(40vh); */
     width: 100%;
     gap: 1rem;
 }
 
-.project-div {
+.cv-grid {
     display: grid;
-    height: fit-content;
-    width: 100%;
-    max-width: 100%;
-    height: 35vh; 
+    grid-auto-rows: fit-content;
+    gap: 1rem;
 }
 
-.ui.card {
+.cv-div {
+    display: grid;
+
+}
+
+.project-div {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    max-height: 35vh; 
+    min-height: 285px;
+}
+
+.ui.card.project {
     padding: 3px;
     grid-template-columns: 2fr 1fr;
     width: 100%;
@@ -58,12 +81,23 @@ nav {
     margin: auto;
 }
 
+.ui.card:hover {
+    transform: scale(1.01);
+}
+
+.ui.card.cv {
+    padding: 3px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    margin: auto;
+}
 .card-left {
     display: grid;
-    max-height: auto;
+    height: 100%;
     max-width: 100%;
     width: auto;
-    background-color: yellow;
+    /* background-color: yellow; */
 }
 
 .image {
@@ -71,16 +105,36 @@ nav {
     height: auto;
     width: auto;
     max-width: 100%;
-    max-height: 30vw;
+    max-height: 100%;
+    justify-content: center;
 }
 .image img {
     display: flex;
     max-width: 100%;
-    max-height: 30vw;
+    max-height: 270px;
     height: auto;
     width: auto;
 }
 
 .ui.header {
     font-family: monospace;
+}
+
+.ui.card > .content {
+    border: 2px black solid;
+    height: 100%;
+}
+
+#popup {
+    display: block;
+    position: fixed;
+    left: 10vw;
+    right: 10vw;
+    top: 6vh;
+    bottom: 6vh;
+    height: auto;
+    background-color: rgba(240, 240, 240, .97);
+    border: black solid 2px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px 5px grey;
 }

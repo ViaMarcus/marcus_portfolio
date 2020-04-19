@@ -27,4 +27,12 @@ describe('User can see list of projects', () => {
             cy.get('.description').should('contain', 'simple SIM')
         })
     });
+
+    it('displays a popup with project info when I click a project', () => {
+        cy.get('#project-3').click()
+        cy.get('#popup').within(() => {
+            cy.get('.link').should('contain', 'GitHub')
+        })
+        
+    })
 });
