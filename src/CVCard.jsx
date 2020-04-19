@@ -5,18 +5,17 @@ const CVCard = ({ cv }) => {
         <>
             <div className="ui card cv">
                 
-                <div className="card-left">
-                    <h3 className="ui header">{ cv.type } </h3>
-                    <h2>  { cv.company }</h2>
-                    <a>{ cv.title }</a>
-                    <a>{ cv.time }</a>
-                    {/* <div class="image">
+                    <h4 className="ui header">{ cv.type } </h4> <a>{ cv.time }</a>
+                    <h3>  { cv.company }</h3>
+                    <p>{ cv.title }</p>
+                    
+                    <div className="image">
                         <img src={ cv.image } alt="failed to load" title={cv.imageAlt}/>
-                    </div> */}
+                        <div className="content">
+                            <div className="description">{ cv.stuffDone }</div>
+                        </div>
                 </div>
-                <div className="content">
-                    <div className="description">{ cv.stuffDone }</div>
-                </div>
+
             </div>
         </>
     )

@@ -13,9 +13,10 @@ class Projects extends Component {
         axios.get('./src/data/projects.json')
         .then(response => {
             this.setState({
-                projects: response.data
+                projects: response.data,
             })
         })
+
     }
 
     setPopup = (project) => {
@@ -32,9 +33,7 @@ class Projects extends Component {
     render() {
         const projects = this.state.projects;
         let projectsList
-        let popup = this.state.popup
         
-
         if (projects.length > 0) {
             projectsList = projects.map(project => {
                 return (

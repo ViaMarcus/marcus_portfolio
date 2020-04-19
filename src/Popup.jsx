@@ -11,7 +11,7 @@ class Popup extends React.Component {
     nothing = (event) => {
         event.stopPropagation()
     }
-    
+
     render() {
     let project=this.props.project;
     if (project == null) {
@@ -22,7 +22,17 @@ class Popup extends React.Component {
         <div className="coverall" onClick={this.unset}>
             <div id="popup" onClick={this.nothing}>
                 <h2>{ project.name }</h2>
-                <p>{ project.description}</p>
+                <div className="divider">
+                    <div className="image">
+                        <img src={project.image} alt="failed to load"/>
+                        <img src={project.screenshot}></img>
+                    </div>
+                    <div>
+                        <p>{ project.description}</p>
+                        <a href={project.repo}>Repo</a> | 
+                        <a href={project.deployed}>Deployed site</a>
+                    </div>
+                </div>
             </div>
         </div>
         </>

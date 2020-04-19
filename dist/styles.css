@@ -18,14 +18,17 @@ body {
     margin-top: 0;
     margin-bottom: 0;
     text-align: center;
+    font-family: monospace;
 }
 
 nav {
+    font-family: monospace;
     color: #f5f5f5;
 }
-
+#hello {
+    font-family: monospace;
+}
 .ui.main {
-    /* background-color: red; */
     margin-top: 4em;
     padding-left: 10px;
     margin-left: 15px;
@@ -35,9 +38,28 @@ nav {
 .ui.container {
     color: darkgray;
     width: 80vw;
+    font-family: monospace;
 }
 .ui.container h3 {
     color: darkgray;
+    margin-top: 0rem;
+}
+.ui.card.cv > .image {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    -webkit-box-orient: horizontal;
+}
+.ui.card.cv img {
+    display: block;
+    max-width: 150px;
+    max-height: 150px;
+    display: inline;
+}
+
+.ui.card a {
+    color: red;
+    position: absolute;
+    right: 2px;
 }
 
 .ui.container h2 {
@@ -89,7 +111,7 @@ nav {
 }
 
 .ui.card.cv {
-    padding: 3px;
+    padding: 7px;
     width: 100%;
     height: 100%;
     display: grid;
@@ -111,7 +133,7 @@ nav {
     max-height: 100%;
     justify-content: center;
 }
-.image img {
+.card-left > .image img {
     display: flex;
     max-width: 100%;
     max-height: 270px;
@@ -142,6 +164,29 @@ nav {
     box-shadow: 10px 10px 5px 5px grey;
     z-index: 3;
 }
+
+.divider {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    /* background-color: darkgoldenrod; */
+    height: 94%;
+    width: 100%;
+    font-size: 140%;
+}
+
+.divider > .image {
+    width: 100%;
+    /* background-color: red; */
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    overflow: scroll;
+}
+.divider > .image > img {
+    width: 100%;
+    height: auto;
+    border: 1px grey solid;
+}
+
 
 .coverall {
     position: fixed;

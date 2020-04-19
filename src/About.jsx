@@ -5,7 +5,7 @@ const About = () => {
         <div className="ui main container">
             <h1 id="about-header" className="ui header">About me</h1>
             <p>
-                This will later be text about me.
+                Not so much love here either, come again at a later date!
             </p>
         </div>
     )

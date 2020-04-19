@@ -4,6 +4,7 @@
       "category": "Website",
       "name": "My First Website",
       "image": "./dist/media/first_website_icon.png",
+      "screenshot": "./dist/media/first_website_screen.png",
       "imageAlt": "Screenshot of my first website, just playing with HTML and CSS",
       "description": "Having a first go at some basic HTML and CSS, having never done it before, I like that grey still.",
       "repo": "https://github.com/ViaMarcus/ViaMarcus.github.io",
@@ -14,6 +15,7 @@
       "category": "Website",
       "name": "Website: Address Book",
       "image": "./dist/media/address_book_icon.png",
+      "screenshot": "./dist/media/address_book_screen.png",
       "imageAlt": "Screenshot from my address book, it does not store addresses",
       "description": "This website was done shortly after my introduction to JavaScript, and I am quite happy that it is difficult to break and has some good styling.",
       "repo": "https://github.com/ViaMarcus/address_book_challenge",
@@ -22,8 +24,9 @@
     {
       "id": 3,
       "category": "Ruby",
-      "name": "ATM-simulator",
+      "name": "Ruby: ATM-simulator",
       "image": "./dist/media/ATM_icon.png",
+      "screenshot": "./dist/media/ruby.png",
       "imageAlt": "The Ruby logo is Copyright © 2006, Yukihiro Matsumoto.",
       "description": "A simple SIM using 3 different custom classes to simulate a person withdrawing money from an ATM.",
       "repo": "https://github.com/ViaMarcus/ATM_challenge"
