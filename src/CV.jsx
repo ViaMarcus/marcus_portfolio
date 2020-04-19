@@ -23,7 +23,7 @@ class CV extends Component {
         if (cvItems.length > 0) {
             cvList = cvItems.map(cv => {
                 return (
-                    <div id={'cv-' + cv.id} class= "cv-div" key={cv.id}>
+                    <div id={'cv-' + cv.id} className= "cv-div" key={cv.id}>
                         <CVCard cv={ cv } />
                     </div>
                 );
@@ -36,7 +36,7 @@ class CV extends Component {
         return (
             <div className="ui main container">
                 <h1 id="cv-header" className="ui header">Curriculum Vitae</h1>
-                <div class="cv-grid">
+                <div className="cv-grid">
                     {cvList}
                 </div>
             </div>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ProjectCard from "./ProjectCard"
-// import Popup from "./Popup"
+import Popup from "./Popup"
 import axios from "axios";
 
 class Projects extends Component {
@@ -20,6 +20,11 @@ class Projects extends Component {
 
     setPopup = (project) => {
         this.setState(state => ({ popup: project }))
+    }
+
+    removePopup = (event) => {
+        this.setState(state => ({ popup: null}))
+        console.log(event.currentTarget)
     }
 
 
@@ -52,7 +57,7 @@ class Projects extends Component {
                     {projectsList}
                 </div>
             </div>
-            {/* <Popup project= { ...popup,  }/> */}
+            <Popup project= { this.state.popup } setPopup = {this.removePopup}/>
         </>
         );
     }

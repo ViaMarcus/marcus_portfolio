@@ -3,10 +3,10 @@ import React from "react"
 const CVCard = ({ cv }) => {
     return (
         <>
-            <div class="ui card cv">
+            <div className="ui card cv">
                 
-                <div class="card-left">
-                    <h3 class="ui header">{ cv.type } </h3>
+                <div className="card-left">
+                    <h3 className="ui header">{ cv.type } </h3>
                     <h2>  { cv.company }</h2>
                     <a>{ cv.title }</a>
                     <a>{ cv.time }</a>
@@ -14,8 +14,8 @@ const CVCard = ({ cv }) => {
                         <img src={ cv.image } alt="failed to load" title={cv.imageAlt}/>
                     </div> */}
                 </div>
-                <div class="content">
-                    <div class="description">{ cv.stuffDone }</div>
+                <div className="content">
+                    <div className="description">{ cv.stuffDone }</div>
                 </div>
             </div>
         </>

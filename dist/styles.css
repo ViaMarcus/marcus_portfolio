@@ -79,7 +79,8 @@ nav {
     height: 100%;
     display: grid;
     margin: auto;
-    box-shadow: 1px 1px 2px 2px darkgray; 
+    box-shadow: 1px 1px 2px 2px darkgray;
+    transition: ease-in-out;
 }
 
 .ui.card:hover {
@@ -139,4 +140,15 @@ nav {
     border: black solid 2px;
     border-radius: 10px;
     box-shadow: 10px 10px 5px 5px grey;
+    z-index: 3;
+}
+
+.coverall {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 1;
 }
