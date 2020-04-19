@@ -3,7 +3,7 @@ import React from "react"
 const ProjectCard = ({ project }) => {
     return (
         <>
-            <div class="ui card">
+            <div class="ui card project">
                 
                 <div class="card-left">
                     <h2 class="ui header">{project.name}</h2>
@@ -14,6 +14,7 @@ const ProjectCard = ({ project }) => {
                 <div class="content">
                     <div class="description">{project.description}</div>
                 </div>
+                
             </div>
         </>
     )

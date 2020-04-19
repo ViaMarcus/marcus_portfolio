@@ -1,0 +1,30 @@
+[
+    {
+        "id": 3,
+        "type": "🎓 Education",
+        "time": "April 2020 - June 2020",
+        "company": "Craft Academy",
+        "title": "Full Stack Web Developer Bootcamp",
+        "stuffDone": "A 12 week intensive course covering languages like JavaScript and Ruby, along with industry best practices and tools.",
+        "image": "./dist/media/CA.png"
+    },
+    {
+        "id": 2,
+        "type": "👨‍💻 Employment",
+        "time": "September 2017 - present",
+        "company": "Viametrics AB",
+        "title": "Global installations coordinator",
+        "stuffDone": "Receiving orders from clients, coordinating hardware installations in retail environments. Being responsible for the logistics chain from our warehouse to installation, making sure our contractors had the hardware and knowledge needed to perform works in time. Also did technical advising and issue troubleshooting.",
+        "image": "./dist/media/viametrics.png"
+    },    
+    {
+        "id": 1,
+        "type": "👷 Employment",
+        "time": "",
+        "company": "",
+        "title": "",
+        "stuffDone": "",
+        "image": ""
+    }
+
+]

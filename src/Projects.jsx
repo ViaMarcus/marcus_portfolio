@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import ProjectCard from "./ProjectCard"
+import Popup from "./Popup"
 import axios from "axios";
 
 class Projects extends Component {
     state = {
-        projects: []
+        projects: [],
+        popup: null
     };
 
     componentDidMount() {
@@ -34,12 +36,15 @@ class Projects extends Component {
     
 
         return (
+            <>
             <div className="ui main container">
                 <h1 id="projects-header" className="ui header">My Projects</h1>
                 <div class="project-grid">
                     {projectsList}
                 </div>
             </div>
+            <Popup project= { popup }/>
+        </>
         );
     }
 }
